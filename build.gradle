@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.wsonoma'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 9
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.junit.jupiter:junit-jupiter:5.5.2')
+    compile 'com.google.guava:guava:28.1-jre'
+}
+
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
